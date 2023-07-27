@@ -45,3 +45,16 @@ Default behaviour: crop all PNG images in the folder `/path/to/folder` using the
 ## Credits
 AutoCrop was created by me in my free time, since I like to have movie screenshots as wallpapers, but often they contain black borders. I will share my wallpapers on my [website](https://thefacc.github.io). The script is based on the Pillow library, a popular Python library used for handling and transforming image files.
 
+## Extra
+Nix shell to run the script: `nix-shell autocrop.nix`
+
+	   # autocrop.nix
+	   with (import <nixpkgs> {});
+	   stdenv.mkDerivation {
+	     name = "autocrop-env";
+	     buildInputs = [
+	       python310Full
+	       python310Packages.numpy
+	       python310Packages.pillow
+	     ];
+	   }
