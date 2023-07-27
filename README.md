@@ -3,7 +3,7 @@
 AutoCrop is a Python script that crops all images in a folder. The crop can happen automatically (to cut out black borders) or manually (given height or width or both, and a fixed point).
 
 ## Usage
-To use AutoCrop, run the following command in your terminal:
+To use AutoCrop, run the following command in your terminal (requires `numpy` and `pillow` packages):
 
     python AutoCrop.py /path/to/folder [--extension EXTENSION] [--padding PADDING] [--width WIDTH] [--height HEIGHT] [--fix FIX] [--append APPEND]
 
